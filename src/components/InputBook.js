@@ -14,6 +14,7 @@ const InputBook = () => {
         const author = e.target.elements.author.value;
         const payload = { title, author };
         dispatch(addNewBook(payload));
+        e.target.reset();
       }}
       >
         <input type="text" placeholder="Book titile ..." id="title" required />

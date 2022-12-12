@@ -17,7 +17,7 @@ export default function reducer(state = initialState, action = {}) {
       ];
     case REMOVE_BOOK:
       return [
-        ...state.filter((item) => item.id !== action.payload.id),
+        ...state.filter((item) => item.id !== action.id),
       ];
     default:
       return state;
@@ -26,4 +26,4 @@ export default function reducer(state = initialState, action = {}) {
 
 export const addNewBook = (payload) => ({ type: ADD_BOOK, payload });
 
-export const removeBook = (payload) => ({ type: REMOVE_BOOK, payload });
+export const removeBook = (id) => ({ type: REMOVE_BOOK, id });
