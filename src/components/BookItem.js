@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const BookItem = ({ book }) => {
   const { title, author } = book;
@@ -11,6 +12,10 @@ const BookItem = ({ book }) => {
       <button type="button">Remove</button>
     </>
   );
+};
+
+BookItem.propTypes = {
+  book: PropTypes.oneOfType([PropTypes.object]).isRequired,
 };
 
 export default BookItem;

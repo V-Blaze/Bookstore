@@ -1,11 +1,11 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import BookItem from './BookItem';
 import InputBook from './InputBook';
-import store from '../redux/configureStore';
 
 const Books = () => {
-  const state = store.getState();
-  const { books } = state;
+  const books = useSelector((state) => state.books);
+
   return (
     <>
       {books.map((book) => (
