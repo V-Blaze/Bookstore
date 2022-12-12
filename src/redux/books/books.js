@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 
-const ADD_BOOK = 'ADD_BOOK';
-const REMOVE_BOOK = 'REMOVE_BOOK';
+const ADD_BOOK = 'books/books/ADD_BOOK';
+const REMOVE_BOOK = 'books/books/REMOVE_BOOK';
 
 const initialState = [];
 export default function reducer(state = initialState, action = {}) {
