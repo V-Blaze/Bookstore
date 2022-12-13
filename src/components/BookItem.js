@@ -10,8 +10,8 @@ const BookItem = ({ book }) => {
   return (
     <>
       <div>
-        <h3>{title}</h3>
-        <h4>{author}</h4>
+        <h4>{title}</h4>
+        <h6>{author}</h6>
       </div>
       <button
         type="button"
