@@ -3,7 +3,23 @@ import { v4 as uuidv4 } from 'uuid';
 const ADD_BOOK = 'books/books/ADD_BOOK';
 const REMOVE_BOOK = 'books/books/REMOVE_BOOK';
 
-const initialState = [];
+const initialState = [
+  {
+    title: 'Clean code',
+    author: 'Robert Matini',
+    id: 1
+  },
+  {
+    title: 'Programming Pearls',
+    author: 'Jon Bently',
+    id: 2
+  },
+  {
+    title: 'Introduction to Algorithim',
+    author: 'Ronald Rivest',
+    id: 3
+  },
+];
 export default function reducer(state = initialState, action = {}) {
   switch (action.type) {
     case ADD_BOOK:
