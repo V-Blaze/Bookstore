@@ -1,5 +1,7 @@
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
+// components
 import { addNewBook } from '../redux/books/books';
 
 const InputBook = () => {
@@ -12,7 +14,7 @@ const InputBook = () => {
         e.preventDefault();
         const title = e.target.elements.title.value;
         const author = e.target.elements.author.value;
-        const payload = { title, author };
+        const payload = { title, author, id: uuidv4() };
         dispatch(addNewBook(payload));
         e.target.reset();
       }}
