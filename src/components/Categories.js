@@ -3,13 +3,13 @@ import { useSelector, useDispatch } from 'react-redux';
 import { checkCurStatus } from '../redux/categories/categories';
 
 const Categories = () => {
-  const dispatch = useDispatch();
-
   const categories = useSelector((state) => state.categories);
+  const dispatch = useDispatch();
 
   return (
     <>
       <div>
+        <hr />
         <div>
           <h5>{categories}</h5>
         </div>

@@ -17,6 +17,7 @@
   - [Setup](#setup)
   - [Run tests](#run-tests)
 - [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -89,7 +90,7 @@
 
 > 
 
-- [Live Link]()
+- [Live Link](https://v-blaze.github.io/Bookstore/build)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -147,6 +148,15 @@ To run tests, run the following command:
 - Twitter: [@blaze_valentine](https://twitter.com/blaze_valentine)
 - LinkedIn: [@valentine-blaze](https://www.linkedin.com/in/valentine-blaze/)
 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **Persist book list to the server.**
+- [ ] **Book list categories selection**
+- [ ] **Edit existing book details.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
