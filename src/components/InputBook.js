@@ -14,8 +14,15 @@ const InputBook = () => {
         e.preventDefault();
         const title = e.target.elements.title.value;
         const author = e.target.elements.author.value;
-        const payload = { title, author, id: uuidv4() };
-        dispatch(addNewBook(payload));
+        const payload = {
+          item_id: uuidv4(), title, author, category: 'fiction',
+        };
+        dispatch(addNewBook(payload)).unwrap();
+        // .then((res) => {
+        //   if (res.status === 201) {
+        //     dispatch({ type: 'books/books/ADD_BOOK', payload });
+        //   }
+        // });
         e.target.reset();
       }}
       >

@@ -11,7 +11,7 @@ const initialState = [];
 
 export default function reducer(state = initialState, action = {}) {
   switch (action.type) {
-    case ADD_BOOK:
+    case `${ADD_BOOK}/fulfilled`:
       return [
         ...state,
         action.payload,
@@ -32,24 +32,17 @@ export default function reducer(state = initialState, action = {}) {
   }
 }
 
-export const postbook = async () => {
-  const newboook = {
-    item_id: 4292742924,
-    title: 'The Great Gatsby',
-    author: 'John Smith',
-    category: 'Fiction',
-  };
-
-  const res = await axios.post(BASE_URL, newboook);
-  console.log(res);
-};
-
 export const getAllBooks = createAsyncThunk(GET_ALL_BOOKS,
   async () => {
     const response = await axios.get(BASE_URL);
     return response?.data;
   });
 
-export const addNewBook = (payload) => ({ type: ADD_BOOK, payload });
+// export const addNewBook = (payload) => ({ type: ADD_BOOK, payload });
+export const addNewBook = createAsyncThunk(ADD_BOOK,
+  async (payload) => {
+    await axios.post(BASE_URL, payload);
+    return payload;
+  });
 
 export const removeBook = (id) => ({ type: REMOVE_BOOK, id });
