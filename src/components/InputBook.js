@@ -18,11 +18,6 @@ const InputBook = () => {
           item_id: uuidv4(), title, author, category: 'fiction',
         };
         dispatch(addNewBook(payload)).unwrap();
-        // .then((res) => {
-        //   if (res.status === 201) {
-        //     dispatch({ type: 'books/books/ADD_BOOK', payload });
-        //   }
-        // });
         e.target.reset();
       }}
       >

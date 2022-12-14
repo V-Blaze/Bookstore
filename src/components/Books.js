@@ -8,16 +8,12 @@ const Books = () => {
 
   return (
     <>
-      {books.map((book) => {
-        console.log(book.id);
-        return (
-          <BookItem
-            key={book.id}
-            book={book}
-          />
-        );
-      })}
-      ;
+      {books.map((book) => (
+        <BookItem
+          key={book.item_id}
+          book={book}
+        />
+      ))}
       <InputBook />
     </>
   );

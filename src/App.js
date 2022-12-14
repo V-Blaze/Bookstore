@@ -11,21 +11,8 @@ import Categories from './components/Categories';
 import { getAllBooks } from './redux/books/books';
 
 function App() {
-  // console.log(Object.assign(value[0], { id: key }));
-  const processAPIData = (res) => {
-    const newObj = Object.entries(res).map(([key, value]) => Object.assign(value[0], { id: key }));
-
-    return newObj;
-  };
-
   const dispatch = useDispatch();
-  dispatch(getAllBooks())
-    .unwrap()
-    .then((res) => {
-      const payload = processAPIData(res);
-      console.log(payload);
-      dispatch({ type: 'books/books/GET_ALL_BOOKS', payload });
-    });
+  dispatch(getAllBooks()).unwrap();
 
   return (
     <>
