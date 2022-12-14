@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 // styleSheet
 import './App.css';
 
@@ -7,8 +8,12 @@ import './App.css';
 import Books from './components/Books';
 import Navbar from './components/Navbar';
 import Categories from './components/Categories';
+import { getAllBooks } from './redux/books/books';
 
 function App() {
+  const dispatch = useDispatch();
+  dispatch(getAllBooks()).unwrap();
+
   return (
     <>
       <BrowserRouter>
