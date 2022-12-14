@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 // styleSheet
 import './App.css';
 
@@ -7,8 +8,28 @@ import './App.css';
 import Books from './components/Books';
 import Navbar from './components/Navbar';
 import Categories from './components/Categories';
+import { getAllBooks } from './redux/books/books';
 
 function App() {
+  const processAPIData = (res) => {
+    const newObj = Object.entries(res).map(([key, value]) => {
+      console.log(Object.assign(value[0], { id: key }));
+      return Object.assign(value[0], { id: key });
+    });
+
+    return newObj;
+  };
+
+  const dispatch = useDispatch();
+  dispatch(getAllBooks())
+    .unwrap()
+    .then((res) => {
+      const payload = processAPIData(res);
+
+      // console.log('newobj', ...payload);
+      dispatch({ type: 'books/books/GET_ALL_BOOKS', payload });
+    });
+
   return (
     <>
       <BrowserRouter>
