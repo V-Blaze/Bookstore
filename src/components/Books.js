@@ -3,6 +3,9 @@ import { useSelector } from 'react-redux';
 import BookItem from './BookItem';
 import InputBook from './InputBook';
 
+// stylesheet
+import './Books.css';
+
 const Books = () => {
   const books = useSelector((state) => state.books);
 
