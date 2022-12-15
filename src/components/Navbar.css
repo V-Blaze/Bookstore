@@ -14,6 +14,7 @@
 
 .nav-title {
   color: #0290FF;
+  cursor: pointer;
 }
 
 .menu-list {
