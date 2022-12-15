@@ -1,0 +1,40 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 2%;
+}
+
+.title-div {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.nav-title {
+  color: #0290FF;
+}
+
+.menu-list {
+  display: flex;
+  gap: 2rem;
+}
+
+.list-item {
+  list-style: none;
+}
+
+.list-item a{
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #000;
+}
+.list-item a:hover{
+  color: #0290FF;
+}
+
+.user-icon {
+  color: #0290FF;
+  font-size: 1.4rem;
+}

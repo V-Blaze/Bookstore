@@ -8,13 +8,15 @@ const Books = () => {
 
   return (
     <>
-      {books.map((book) => (
-        <BookItem
-          key={book.item_id}
-          book={book}
-        />
-      ))}
-      <InputBook />
+      <div className="main-book-section">
+        {books.map((book) => (
+          <BookItem
+            key={book.item_id}
+            book={book}
+          />
+        ))}
+        <InputBook />
+      </div>
     </>
   );
 };
