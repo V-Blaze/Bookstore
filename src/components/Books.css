@@ -6,3 +6,8 @@
   padding: 3%;
   padding-bottom: 8%;
 }
+
+hr {
+  background-color:  #898989;
+  margin: 1rem 0;
+}

@@ -18,6 +18,7 @@ const Books = () => {
             book={book}
           />
         ))}
+        <hr />
         <InputBook />
       </div>
     </>
