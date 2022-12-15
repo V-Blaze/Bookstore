@@ -12,15 +12,15 @@ const BookItem = ({ book }) => {
   const { title, author, item_id } = book;
   return (
     <>
-      <div className="book-item-main-div">
-        <div className="title-section">
+      <div className="book-item-main-container">
+        <div className="book-title-section">
           <div>
             <span className="book-category">Fiction</span>
             <h2 className="book-title">{title}</h2>
-            <h6 className="book-author">{author}</h6>
+            <span className="book-author">{author}</span>
           </div>
           <div className="book-action-btns">
-            <button type="button">Commnents</button>
+            <button type="button">Comments</button>
             <button
               type="button"
               onClick={(e) => {
@@ -39,13 +39,14 @@ const BookItem = ({ book }) => {
             <div className="circular-progress" />
             <div>
               <h3 className="circular-progress-percent">65%</h3>
-              <span>Completed</span>
+              <span className="progress-span">Completed</span>
             </div>
           </div>
+          <div className="progress-section-divider" />
           <div className="current-chapter-section">
-            <h3 className="cur-chapter">CURRENT CHAPTER</h3>
-            <h4>Chapter 10</h4>
-            <button type="button">UPDATE PROGRESS</button>
+            <span className="cur-chapter-title">CURRENT CHAPTER</span>
+            <h4 className="cur-chapter">Chapter 10</h4>
+            <button type="button" className="update-progress-btn">UPDATE PROGRESS</button>
           </div>
         </div>
       </div>
