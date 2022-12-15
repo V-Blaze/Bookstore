@@ -1,6 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { checkCurStatus } from '../redux/categories/categories';
+// Stylesheet
+import './categories.css';
 
 const Categories = () => {
   const categories = useSelector((state) => state.categories);
@@ -8,12 +10,12 @@ const Categories = () => {
 
   return (
     <>
-      <div>
-        <hr />
+      <div className="categories-main-container">
         <div>
-          <h5>{categories}</h5>
+          <h5 className="category-status">{categories}</h5>
         </div>
         <button
+          className="check-status-btn"
           type="button"
           onClick={(e) => {
             e.preventDefault();
