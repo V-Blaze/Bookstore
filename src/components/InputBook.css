@@ -5,30 +5,29 @@
 }
 
 .form-title {
-  color: #88888F;
+  color: #88888f;
   font-size: 1.6rem;
 }
 
 .book-form input {
   margin-right: 1rem;
   width: 40%;
-  border: solid 1px #E8E8E8;
+  border: solid 1px #e8e8e8;
   height: 2.5rem;
   padding: 1rem;
   border-radius: 0.1rem;
 }
 
 .book-form input::placeholder {
-  color: #88888F;
+  color: #88888f;
 }
 
 .book-form button {
   color: #fff;
-  background-color: #0290FF;
+  background-color: #0290ff;
   border: none;
   height: 2rem;
   width: 15%;
   border-radius: 0.2rem;
   cursor: pointer;
 }
-

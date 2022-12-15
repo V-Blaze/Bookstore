@@ -13,7 +13,7 @@
 }
 
 .nav-title {
-  color: #0290FF;
+  color: #0290ff;
   cursor: pointer;
 }
 
@@ -26,16 +26,17 @@
   list-style: none;
 }
 
-.list-item a{
+.list-item a {
   text-decoration: none;
   font-size: 1.2rem;
   color: #000;
 }
-.list-item a:hover{
-  color: #0290FF;
+
+.list-item a:hover {
+  color: #0290ff;
 }
 
 .user-icon {
-  color: #0290FF;
+  color: #0290ff;
   font-size: 1.4rem;
 }
